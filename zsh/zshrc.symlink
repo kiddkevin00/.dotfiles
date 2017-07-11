@@ -85,3 +85,5 @@ export PATH="/usr/local/sbin:$PATH"
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
+# Fix the issue that percent sign appears after entering each cmd for some unknown reason
+unsetopt PROMPT_SP
