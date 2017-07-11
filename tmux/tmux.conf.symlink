@@ -11,10 +11,10 @@ bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft=
 
 # Shortcuts
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
-bind -t vi-copy 'v' begin-selection
-bind -t vi-copy 'y' copy-pipe "reattach-to-user-namespace pbcopy"
-unbind -t vi-copy Enter
-bind -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+#bind -t vi-copy 'v' begin-selection
+#bind -t vi-copy 'y' copy-pipe "reattach-to-user-namespace pbcopy"
+#unbind -t vi-copy Enter
+#bind -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 bind ] run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
 bind b split-window "tmux ls | percol --initial-index $(tmux ls | awk \"/^$(tmux display-message -p '#{session_name}'):/ {print NR-1}\") | cut -d':' -f 1 | tr -d '\n' | xargs -0 tmux switch-client -t"
 
