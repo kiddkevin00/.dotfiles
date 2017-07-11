@@ -65,9 +65,7 @@ source $ZSH/oh-my-zsh.sh
 # startup dotfiles
 ##
 source $DOTZ/script/export.sh
-export PATH="$HOME/code/opensource/depot_tools":"$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-eval "$(jenv init -)"
 
 # User configuration
 
