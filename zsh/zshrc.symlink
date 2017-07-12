@@ -86,7 +86,7 @@ export PATH="/usr/local/sbin:$PATH"
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Overwrite default bck-i-search tool: percol_select_history
-bindkey -v
+#bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
