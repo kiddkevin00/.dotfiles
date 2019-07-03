@@ -80,7 +80,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 # brew env comes before macs bin..
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -91,3 +92,6 @@ bindkey '^R' history-incremental-search-backward
 
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
 unsetopt PROMPT_SP
+
+# set the path for ruby and gem instead of using the system one
+eval "$(rbenv init -)"
