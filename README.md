@@ -9,3 +9,6 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 3. adds `sciprt/export.sh` to .zshrc then loads all files ***/**.export.zsh on startup as well as ****/path.zsh and ***/completion.zsh
 4. make sure the bin folder is added to path's and run `dot` periodically to update apps (brew, oh-my-zsh...)
 
+## Some additional steps required
+1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3`
+2. Override the system's python: `cd /usr/local/bin/ && ln -s python3 python` 
