@@ -80,7 +80,7 @@ eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the syst
 
 
 # brew env comes before macs bin..
-export PATH="/usr/local/bin:/usr/local/opt:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
