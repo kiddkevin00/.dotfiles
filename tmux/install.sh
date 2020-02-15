@@ -22,4 +22,3 @@ then
   echo " Installing tmuxinator for you"
   gem install tmuxinator
 fi
-

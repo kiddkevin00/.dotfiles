@@ -65,7 +65,7 @@ source $ZSH/oh-my-zsh.sh
 # startup dotfiles
 ##
 source $DOTZ/script/export.sh
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the system one
 
 # User configuration
 
@@ -80,18 +80,14 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 # brew env comes before macs bin..
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/opt:$PATH"
 
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
-# Overwrite default bck-i-search tool: percol_select_history
-#bindkey -v
+# Overwrite the current bck-i-search tool: percol_select_history
 bindkey '^R' history-incremental-search-backward
 
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
 unsetopt PROMPT_SP
 
-# set the path for ruby and gem instead of using the system one
-eval "$(rbenv init -)"
