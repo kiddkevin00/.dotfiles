@@ -11,5 +11,6 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 
 ## Some additional steps required
 1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3`
-2. Override the system's python: `$ cd /usr/local/bin/ && ln -s python3 python` 
-3. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
+2. Override the system's python: `$ cd /usr/local/bin/ && ln -s python3 python`
+3. Able to launch sublime from command line: `$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+4. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
