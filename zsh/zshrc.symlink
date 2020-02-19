@@ -61,12 +61,6 @@ plugins=(git brew tmux osx node tmuxinator web-search)
 source $ZSH/oh-my-zsh.sh
 
 
-##
-# startup dotfiles
-##
-source $DOTZ/script/export.sh
-eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the system one
-
 # User configuration
 
 # You may need to manually set your language environment
@@ -79,8 +73,17 @@ eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the syst
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 
+# Startup dotfiles
+
+source $DOTZ/script/export.sh
+
+eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the system one
+
 # brew env comes before macs bin..
 export PATH="/usr/local/bin:$PATH"
+
+
+# My stuff
 
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -91,3 +94,5 @@ bindkey '^R' history-incremental-search-backward
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
 unsetopt PROMPT_SP
 
+# Use Sublime Text as the editor for many commands that prompt for input for unix tools, such as git and subversion
+export EDITOR='subl -w'
