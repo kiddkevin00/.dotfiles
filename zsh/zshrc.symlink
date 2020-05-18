@@ -96,3 +96,6 @@ unsetopt PROMPT_SP
 
 # Use Sublime Text as the editor for many commands that prompt for input for unix tools, such as git and subversion
 export EDITOR='subl -w'
+
+# Set up MongoDB alias due to new macOS not supporting the permission to create /data/db
+alias mongod="mongod --dbpath=/usr/local/var/mongodb"
