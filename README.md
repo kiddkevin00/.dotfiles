@@ -10,7 +10,7 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 4. make sure the bin folder is added to path's and run `dot` periodically to update apps (brew, oh-my-zsh...)
 
 ## Some additional steps required
-1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3`
+1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3 && rbenv global 2.6.3`
 2. Override the system's python: `$ cd /usr/local/bin/ && ln -s python3 python`
 3. Able to launch sublime from command line: `$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 4. If having issue related to latest tmux version: `$ brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/b3bd700d9fc53fa153c884b0ea613822de1f375c/Formula/tmux.rb && ln -s /usr/local/opt/libevent/lib/libevent.dylib /usr/local/opt/libevent/lib/libevent-2.1.6.dylib && brew pin tmux` 
