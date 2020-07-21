@@ -99,3 +99,6 @@ export EDITOR='subl -w'
 
 # Set up MongoDB alias due to new macOS not supporting the permission to create /data/db
 alias mongod="mongod --dbpath=/usr/local/var/mongodb"
+
+# Set up yarn alias so that you don't need to install yarn
+alias yarn="npx yarn"
