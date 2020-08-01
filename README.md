@@ -16,3 +16,4 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 4. If having issue related to latest tmux version: `$ brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/b3bd700d9fc53fa153c884b0ea613822de1f375c/Formula/tmux.rb && ln -s /usr/local/opt/libevent/lib/libevent.dylib /usr/local/opt/libevent/lib/libevent-2.1.6.dylib && brew pin tmux`
 5. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
 6. Might need to run `$ brew install vim` to resolve vim outdated configuration issue
+7. Check "Enable mouse reporting" (and "Report mouse wheel events") in iTerm2/Preference/Profile/Terminal
