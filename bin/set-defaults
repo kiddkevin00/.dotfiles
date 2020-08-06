@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
 # Sets OS X defaults by running $DOTZ/osx/set-defaults.sh.
 

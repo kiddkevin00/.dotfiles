@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
 # Tmux
 # This isntalls tmux plus some of the dependencies.

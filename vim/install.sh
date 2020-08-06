@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 #
 # Vim
 # This installs vim and vim plugins (using vundle)
