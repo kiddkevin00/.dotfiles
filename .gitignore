@@ -1,3 +1,4 @@
 
 # don't commit gitconfig file. regenerate it when installing instead
 gitconfig.symlink
+.idea/
