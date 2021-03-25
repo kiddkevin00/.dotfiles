@@ -1,8 +1,7 @@
 
 [user]
-   name = AUTHORNAME
-   email = AUTHOREMAIL
-
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 
 [help]
   autocorrect = 10
@@ -19,15 +18,19 @@
 [alias]
   lga = log --graph --oneline --all --decorate
 
-
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
 
-
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
 
 [credential]
   helper = GIT_CREDENTIAL_HELPER
+
+[push]
+  default = current
+
+[branch]
+  autoSetupMerge = always

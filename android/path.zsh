@@ -1,7 +1,7 @@
-## COMMENT ALL OUT UNTIL I NEED IT SOMEDAY
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-## JDK home for android studio (jdk installed via brew cask)
-#export STUDIO_JDK="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk"
-#export PATH=~/bin:$PATH
-
-#export MANPATH="$MANPATH:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/man"
+export MANPATH=$MANPATH:$(/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java_home)/man

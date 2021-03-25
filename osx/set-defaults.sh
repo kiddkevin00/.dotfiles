@@ -11,7 +11,7 @@
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Use AirDrop over every interface. srsly this should be a default.
+# Use AirDrop over every interface. Surely this should be a default.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
 # Always open everything in Finder's list view. This is important.
