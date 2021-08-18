@@ -34,7 +34,7 @@ gupdate() {
 }
 
 gupdate2() {
-    echo "updateing all repos in $(pwd)";
+    echo "updating all repos in $(pwd)";
     dirs = find . -name '.git' -type d -exec '{}' +
     if [ ${#dirs[@]} -gt 0 ]; then
         find . -name '.git' -type d -print0 | while IFS= read -r -d '' gitfolder; do
