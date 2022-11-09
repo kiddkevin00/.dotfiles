@@ -142,15 +142,15 @@ function setup_oh_my_custom () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for file in $(find -H "$DOTZ/zsh/oh-my-custom/scripts" -maxdepth 3 -name '*.zsh')
+  for file in $(find -H "$DOTFILES_ROOT/zsh/oh-my-custom/scripts" -maxdepth 3 -name '*.zsh')
   do
-    dst="$ZSH/custom/scripts/$(basename $file)"
+    dst="$HOME/.oh-my-zsh/custom/scripts/$(basename $file)"
     link_file "$file" "$dst"
   done
 
-  for file in $(find -H "$DOTZ/zsh/oh-my-custom/plugins" -maxdepth 3 -name '*.zsh')
+  for file in $(find -H "$DOTFILES_ROOT/zsh/oh-my-custom/plugins" -maxdepth 3 -name '*.zsh')
   do
-    dst="$ZSH/custom/plugins/$(basename $file)"
+    dst="$HOME/.oh-my-zsh/custom/plugins/$(basename $file)"
     link_file "$file" "$dst"
   done
 }
