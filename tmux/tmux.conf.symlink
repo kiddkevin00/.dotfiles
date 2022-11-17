@@ -34,7 +34,7 @@ set -g status-left "#[fg=green]Session: #S"
 set -g status-right "#[fg=cyan] #H %d %b %R"
 
 # not working for some reason
-# set -g status-utf8 on
+#set -g status-utf8 on
 
 # set color of active pane
 #set -g pane-border-fg colour235
