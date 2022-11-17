@@ -77,10 +77,11 @@ source $ZSH/oh-my-zsh.sh
 
 source $DOTZ/script/export.sh
 
-eval "$(rbenv init -)" # Set the path for ruby and gem instead of using the system one
+# Set the path for ruby and gem instead of using the system one
+eval "$(rbenv init -)"
 
 # brew env comes before macs bin..
-export PATH="/usr/local/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add libs installed by pip to the PATH
 export PATH="$PATH:$HOME/Library/Python/3.9/bin"
