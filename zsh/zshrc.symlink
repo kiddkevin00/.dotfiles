@@ -75,22 +75,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Startup dotfiles
 
-if [[ -z $TMUX ]]; then
-  source $DOTZ/script/export.sh
-fi
+source $DOTZ/script/export.sh
 
 # Set the path for ruby and gem instead of using the system one
-if [[ -z $TMUX ]]; then
-  eval "$(rbenv init -)"
-fi
+eval "$(rbenv init -)"
 
 # brew env comes before macs bin..
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add libs installed by pip to the PATH
-if [[ -z $TMUX ]]; then
-  export PATH="$PATH:$HOME/Library/Python/3.9/bin"
-fi
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 
 
 # My stuff
@@ -109,9 +103,6 @@ unsetopt PROMPT_SP
 
 # Use Sublime Text as the editor for many commands that prompt for input or unix tools, such as git and subversion
 export EDITOR='subl -w'
-
-# Set up MongoDB alias due to new macOS not supporting the permission to create /data/db
-alias mongod="mongod --dbpath=/usr/local/var/mongodb"
 
 
 # Remove duplicate dirs from $PATH
