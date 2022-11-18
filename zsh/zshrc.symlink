@@ -2,9 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export DOTZ=$HOME/dotfiles
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
+# Stash your existing environment variables in ~/.localrc file. This means
+# they'll stay out of your public dotfiles repository, but you'll have access
+# to them in your scripts.
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
@@ -75,16 +75,22 @@ source $ZSH/oh-my-zsh.sh
 
 # Startup dotfiles
 
-source $DOTZ/script/export.sh
+if [[ -z $TMUX ]]; then
+  source $DOTZ/script/export.sh
+fi
 
 # Set the path for ruby and gem instead of using the system one
-eval "$(rbenv init -)"
+if [[ -z $TMUX ]]; then
+  eval "$(rbenv init -)"
+fi
 
 # brew env comes before macs bin..
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add libs installed by pip to the PATH
-export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+if [[ -z $TMUX ]]; then
+  export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+fi
 
 
 # My stuff
@@ -101,7 +107,7 @@ bindkey '^R' history-incremental-search-backward
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
 unsetopt PROMPT_SP
 
-# Use Sublime Text as the editor for many commands that prompt for input for unix tools, such as git and subversion
+# Use Sublime Text as the editor for many commands that prompt for input or unix tools, such as git and subversion
 export EDITOR='subl -w'
 
 # Set up MongoDB alias due to new macOS not supporting the permission to create /data/db

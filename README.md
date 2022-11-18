@@ -13,7 +13,7 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 
 ## Some additional steps required
 1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3 && rbenv global 2.6.3`
-2. Override the system's python: `$ cd /usr/local/bin/ && ln -s python3 python`
+2. Override the system's python: `$ cd /opt/homebrew/bin && ln -s python3 python`
 3. Able to launch sublime from command line: `$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 4. If having issue related to latest tmux version, install v3.1c via `$ brew tap-new $USER/local-tmux --no-git && brew extract --version=3.1c tmux $USER/local-tmux && brew install tmux@3.1c && brew pin tmux@3.1c`
 5. If having issue related to latest mux (tmuxinator) version, install v2.0.2: `$ gem install mux -v 2.0.2`
