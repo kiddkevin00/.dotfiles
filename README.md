@@ -12,11 +12,10 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 ` so that there is only one node installed (the one in `nvm`)
 
 ## Some additional steps required
-1. Install ruby to override the system one: `$ brew install rbenv && rbenv install 2.6.3 && rbenv global 2.6.3`
-2. Override the system's python: `$ cd /opt/homebrew/bin && ln -s python3 python`
-3. Able to launch sublime from command line: `$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
-4. If having issue related to latest tmux version, install v3.1c via `$ brew tap-new $USER/local-tmux --no-git && brew extract --version=3.1c tmux $USER/local-tmux && brew install tmux@3.1c && brew pin tmux@3.1c`
-5. If having issue related to latest mux (tmuxinator) version, install v2.0.2: `$ gem install mux -v 2.0.2`
-6. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
-7. Might need to run `$ brew install vim` to resolve vim outdated configuration issue
-8. Check "Enable mouse reporting" (and "Report mouse wheel events") boxes in iTerm2/Preference/Profile/Terminal tab to enable mouse scrolling and clicking to switch pane in tmux
+1. Able to launch sublime from command line: `$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+2. If having issue related to latest tmux version, install v3.1c via `$ brew tap-new $USER/local-tmux --no-git && brew extract --version=3.1c tmux $USER/local-tmux && brew install tmux@3.1c && brew pin tmux@3.1c`
+3. If having issue related to latest mux (tmuxinator) version, install v2.0.2: `$ gem install mux -v 2.0.2`
+4. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
+5. Might need to run `$ brew install vim` to resolve vim outdated configuration issue
+6. Check "Enable mouse reporting" (and "Report mouse wheel events") boxes in iTerm2/Preference/Profile/Terminal tab to enable mouse scrolling and clicking to switch pane in tmux
+7. Copy `~/.tool-versions` and run `brew install asdf && cd ~ && asdf install` (Might need to run `env /usr/bin/arch -x86_64 /bin/zsh --login` first)
