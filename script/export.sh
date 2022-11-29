@@ -40,8 +40,8 @@ done
 #done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+#autoload -U compinit
+#compinit
 
 # load every completion after autocomplete loads
 if test -n "$(find $DOTZ -maxdepth 3 -name 'completion.zsh' -print -quit)"
