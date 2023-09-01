@@ -88,9 +88,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # My stuff
 
-# Augment existing shells to load and unload environment variables depending on the current directory
-eval "$(direnv hook zsh)"
-
 # Uncomment the following line if you want to use command line tools with Postgres.app
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
