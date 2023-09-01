@@ -9,7 +9,7 @@ echo " Override the default Vim for you."
 brew install vim
 
 # install vundle/vundlePlugins
-$DOTZ/vim/vundle-install.sh 2>&1
+$HOME/dotfiles/vim/vundle-install.sh 2>&1
 
 # create temp files used by vim
 mkdir -p $HOME/.vim/tmp/{backup,swap,tags,undo}
