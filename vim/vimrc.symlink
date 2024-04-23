@@ -51,7 +51,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " block comment shortcuts
- Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " http://vimawesome.com/plugin/showmarks-you-belong-with-me
 " Plugin 'ShowMarks'

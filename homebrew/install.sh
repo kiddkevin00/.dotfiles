@@ -13,7 +13,7 @@ then
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
   then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # install cask
     if test ! $(which brew-cask) # test -z "$(brew ls --versions brew-cask)"
