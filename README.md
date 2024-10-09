@@ -4,7 +4,7 @@ My dot-files mostly for mac. its a tmux/zsh/vim setup... you may love it or hate
 
 Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clone https://github.com/kiddkevin00/.dotfiles.git dotfiles`
 
-1. `$ cd $HOME/dotfiles && sudo ./script/install` - installs common tools zsh, oh-my-zsh, homebrew...
+1. `$ cd $HOME/dotfiles && ./script/install` - installs common tools zsh, oh-my-zsh, homebrew... (might need to run `$ eval "$(/opt/homebrew/bin/brew shellenv)"` to enable brew temporarily)
 2. `$ cd $HOME/dotfiles && sudo ./script/bootstrap` - symlinks all `{filename}.symlink` to `$HOME/.{filename}` files (if no such file or dir, run `$ sudo mkdir ~/.oh-my-zsh/custom/scripts`. If failed on permission, run `$ sudo chmod 777 ~/.oh-my-zsh/custom` to allow replacements)
 3. Install yarn via `$ brew install yarn && brew uninstall --ignore-dependencies node
 4. Make sure the bin folder is added to path's and run `dot` periodically to update apps (brew, oh-my-zsh...) so that there is only one node installed (the one in `nvm`)
