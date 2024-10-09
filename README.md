@@ -15,6 +15,6 @@ Right now it expects to be installed in `$HOME/dotfiles` so `cd $HOME && git clo
 3. If having issue related to latest mux (tmuxinator) version, install v2.0.2: `$ gem install mux -v 2.0.2`
 4. Might need to resolve openssl version conflict: `$ brew update && brew upgrade && brew uninstall --ignore-dependencies openssl && brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb`
 5. Might need to run `$ brew install vim` to resolve vim outdated configuration issue
-6. If there is missing plugin(s), run `$ vim +PluginInstall +qall`
+6. If there is missing plugin(s), run `$ sudo vim +PluginInstall +qall`
 7. Check "Enable mouse reporting" (and "Report mouse wheel events") boxes in iTerm2/Preference/Profile/Terminal tab to enable mouse scrolling and clicking to switch pane in tmux
 8. Copy `~/.tool-versions` and run `brew install asdf && asdf plugin-add nodejs && asdf plugin-add python && asdf plugin-add java && asdf install` (Might need to run `env /usr/bin/arch -x86_64 /bin/zsh --login` first)
