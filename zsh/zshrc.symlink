@@ -106,6 +106,12 @@ source /opt/homebrew/opt/asdf/libexec/asdf.sh
 # Set JAVA_HOME
 source ~/.asdf/plugins/java/set-java-home.zsh
 
+# Add Golang/Python support
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add MySQL support
+export PATH="$PATH:/opt/homebrew/opt/mysql-client/bin"
+
 # Remove duplicate dirs from $PATH
 if [ -n "$PATH" ]; then
   old_PATH=$PATH:; PATH=
