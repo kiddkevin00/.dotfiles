@@ -108,14 +108,11 @@ unsetopt PROMPT_SP
 export EDITOR='subl -w'
 
 # Start asdf software version manager
-if type brew &>/dev/null
-then
-  ASDF_DIR="$(brew --prefix asdf 2>/dev/null)"
-  if [ -f "$ASDF_DIR/libexec/asdf.sh" ]; then
-    source "$ASDF_DIR/libexec/asdf.sh"
-  fi
-  unset ASDF_DIR
-fi
+export ASDF_DATA_DIR="${ASDF_DATA_DIR:-$HOME/.asdf}"
+case ":$PATH:" in
+  *":$ASDF_DATA_DIR/shims:"*) ;;
+  *) export PATH="$ASDF_DATA_DIR/shims:$PATH" ;;
+esac
 
 # Set JAVA_HOME
 if [ -f "$HOME/.asdf/plugins/java/set-java-home.zsh" ]; then
