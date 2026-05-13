@@ -104,9 +104,6 @@ bindkey '^R' history-incremental-search-backward
 # Fix the issue that percent sign appears after entering each cmd for some unknown reason
 unsetopt PROMPT_SP
 
-# Use Sublime Text as the editor for many commands that prompt for input or unix tools, such as git and subversion
-export EDITOR='subl -w'
-
 # Start asdf software version manager
 export ASDF_DATA_DIR="${ASDF_DATA_DIR:-$HOME/.asdf}"
 case ":$PATH:" in
