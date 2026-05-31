@@ -146,3 +146,5 @@ fi
 
 # Prefer official recommended cmd: `mongod --config "$(brew --prefix)/etc/mongod.conf"`
 alias mongod-local='mongod --dbpath="$(brew --prefix)/var/mongodb"'
+# Open ~/Desktop on every new iTerm2 window/pane
+[[ "$SHLVL" -eq 1 ]] && cd ~/Desktop
